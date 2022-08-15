@@ -33,7 +33,7 @@ const LoginPage = () => {
       <>
 
         <div style={{ "padding-left": "20%", "padding-right": "20%" }}>
-          <h1 style={{ "color": 'white' }}> Supabase Login</h1>
+          <h1 style={{ "color": 'white' }}> Cryptocurrensea Login</h1>
           {error && <p>{error.message}</p>}
           <Auth
             // view="update_password"
