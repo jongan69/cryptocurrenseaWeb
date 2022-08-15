@@ -19,25 +19,26 @@ const LoginPage = () => {
   if (user)
     return (
       <>
-        <h1> Welcome</h1>
-        <div style={{ "padding": "10%" }}>
+
+        <div style={{ "padding-left": "20%", "padding-right": "20%" }}>
+          <h1 style={{ "color": 'white' }}> Welcome</h1>
+          <p style={{ "color": 'white' }}>User Authenticated, you may now log into the mobile app</p>
           <button onClick={() => supabaseClient.auth.signOut()}>Sign out</button>
-          <p>User:</p>
-          <pre>{JSON.stringify(user, null, 2)}</pre>
-          {/* <p>client-side data fetching with RLS</p> */}
-          <pre>User Data: {JSON.stringify(data, null, 2)}</pre>
+          {/* <pre style={{ "color": 'white'}}>{JSON.stringify(user, null, 2)}</pre> */}
+          {/* <pre>User Data: {JSON.stringify(data, null, 2)}</pre> */}
         </div>
       </>
     ); else {
     return (
       <>
-        <h1> Supabase Login</h1>
-        <div style={{ "padding": "10%" }}>
+
+        <div style={{ "padding-left": "20%", "padding-right": "20%" }}>
+          <h1 style={{ "color": 'white' }}> Supabase Login</h1>
           {error && <p>{error.message}</p>}
           <Auth
             // view="update_password"
             supabaseClient={supabaseClient}
-            providers={['google', 'github', 'apple']}
+            // providers={['google', 'github', 'apple']}
             socialLayout="horizontal"
             socialButtonSize="xlarge"
           />
